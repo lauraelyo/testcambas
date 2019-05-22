@@ -19,8 +19,8 @@ A test project with Django. Include authentication flow, custom user, extra prof
 ``` 
 $ python3 -m venv path/to/virtualenv
 $ source path/to/vitualenv/bin/activate
-$ git clone https://github.com/lauraelyo/cambastest.git
-$ cd cambastest
+$ git clone https://github.com/lauraelyo/testcambas.git
+$ cd testcambas
 $ pip install -r requirements.txt
 ```
 
