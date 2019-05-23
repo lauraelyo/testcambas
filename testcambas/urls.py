@@ -23,6 +23,7 @@ urlpatterns = [
     path('users/', include(('users.urls', 'users'), namespace='users')),
     path('accounts/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     path('accounts/', include('allauth.urls')),
+    path('facebook/', include(('facebookpage.urls', 'facebook'), namespace='facebook')),
 	path('', views.Home.as_view(), name='home'),
 
 ]

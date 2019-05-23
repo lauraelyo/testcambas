@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 DJANGO_APPS = (
@@ -50,7 +49,8 @@ THIRD_PARTY_APPS = (
 
 LOCAL_APPS = (
     'users',
-    'accounts'
+    'accounts',
+    'facebookpage'
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -157,7 +157,7 @@ AUTHENTICATION_BACKENDS = (
 SOCIALACCOUNT_PROVIDERS = {
     'facebook': {
         'METHOD': 'oauth2',
-        'SCOPE': ['email', 'public_profile', 'user_friends'],
+        'SCOPE': ['email', 'public_profile', 'user_friends', 'pages_show_list', 'manage_pages'],
         'AUTH_PARAMS': {'auth_type': 'reauthenticate'},
         'INIT_PARAMS': {'cookie': True},
         'FIELDS': [
@@ -193,5 +193,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
-
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+#Facebook API URL
+FACEBOOK_API_URL = "https://graph.facebook.com/v3.3/"
 
